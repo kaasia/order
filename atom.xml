@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-18T02:03:09.788Z</updated>
+  <updated>2016-03-21T05:03:24.971Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>next社交链接配置问题</title>
+    <link href="http://yoursite.com/2016/03/21/next%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2016/03/21/next社交链接配置问题/</id>
+    <published>2016-03-21T05:02:47.000Z</published>
+    <updated>2016-03-21T05:03:24.971Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;Next添加社交链接&quot;&gt;&lt;a href=&quot;#Next添加社交链接&quot; class=&quot;headerlink&quot; title=&quot;Next添加社交链接&quot;&gt;&lt;/a&gt;Next添加社交链接&lt;/h1&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;社交链接是指next主题边栏，github,微博，豆瓣，知乎之类的个人 主页链接，为了好看，一般旁边会有一个这个社交账号的图标，我在按照教程添加了github,微博，豆瓣，知乎的账号，我发现豆瓣和知乎没有显示图标，导致特别的不美观。&lt;/p&gt;
+&lt;h2 id=&quot;解决方法&quot;&gt;&lt;a href=&quot;#解决方法&quot; class=&quot;headerlink&quot; title=&quot;解决方法&quot;&gt;&lt;/a&gt;解决方法&lt;/h2&gt;&lt;p&gt;在主题的配置文件中&lt;br&gt;social_icons:下面配置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Social links&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: https://github.com/xxx/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Weibo: http://weibo.com/xxx/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Douban: https://www.douban.com/people/xxx/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Zhihu: https://www.zhihu.com/people/xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Social Icons&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social_icons:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # Icon Mappings&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  GitHub: github&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Twitter: twitter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Weibo: weibo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Douban: globe&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Zhihu: globe&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;next主题使用的图标是调用的Font Awesome的里面的图标，&lt;br&gt;而Font Awesome里面并没有知乎和豆瓣的图标，因此没有显示，&lt;br&gt;我们只需要在Font Awesome里面找到喜欢的图标，将图标的名字填到相应的位置&lt;br&gt;就可以了。例如我给知乎和豆瓣用的图标是globe，你可以替换成其他相应的。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Next添加社交链接&quot;&gt;&lt;a href=&quot;#Next添加社交链接&quot; class=&quot;headerlink&quot; title=&quot;Next添加社交链接&quot;&gt;&lt;/a&gt;Next添加社交链接&lt;/h1&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerli
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>测试</title>
