@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-22T08:28:45.379Z</updated>
+  <updated>2016-03-23T04:35:17.790Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/21/next%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2016/03/21/next社交链接配置问题/</id>
     <published>2016-03-21T05:02:47.000Z</published>
-    <updated>2016-03-22T08:28:45.379Z</updated>
+    <updated>2016-03-23T04:35:17.790Z</updated>
     
     <content type="html">&lt;h1 id=&quot;Next添加社交链接&quot;&gt;&lt;a href=&quot;#Next添加社交链接&quot; class=&quot;headerlink&quot; title=&quot;Next添加社交链接&quot;&gt;&lt;/a&gt;Next添加社交链接&lt;/h1&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;社交链接是指next主题边栏，github,微博，豆瓣，知乎之类的个人 主页链接，为了好看，一般旁边会有一个这个社交账号的图标，我在按照教程添加了github,微博，豆瓣，知乎的账号，我发现豆瓣和知乎没有显示图标，导致特别的不美观。&lt;/p&gt;
 &lt;h2 id=&quot;解决方法&quot;&gt;&lt;a href=&quot;#解决方法&quot; class=&quot;headerlink&quot; title=&quot;解决方法&quot;&gt;&lt;/a&gt;解决方法&lt;/h2&gt;&lt;p&gt;在主题的配置文件中&lt;br&gt;social_icons:下面配置&lt;/p&gt;
@@ -33,6 +33,8 @@
       &lt;h1 id=&quot;Next添加社交链接&quot;&gt;&lt;a href=&quot;#Next添加社交链接&quot; class=&quot;headerlink&quot; title=&quot;Next添加社交链接&quot;&gt;&lt;/a&gt;Next添加社交链接&lt;/h1&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerli
     
     </summary>
+    
+      <category term="hexo相关" scheme="http://yoursite.com/categories/hexo%E7%9B%B8%E5%85%B3/"/>
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
