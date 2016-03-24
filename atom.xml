@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-23T04:35:17.790Z</updated>
+  <updated>2016-03-24T01:13:35.968Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2016/03/24/java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/03/24/java编程思想读书笔记（一）/</id>
+    <published>2016-03-24T01:13:35.796Z</published>
+    <updated>2016-03-24T01:13:35.968Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;好烦，老板还不给签名，毕业论文也屡不出头绪，不想写&lt;br&gt;别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;整理下看的Java编程思想的读书笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;1-赋值-“-”操作符&quot;&gt;&lt;a href=&quot;#1-赋值-“-”操作符&quot; class=&quot;headerlink&quot; title=&quot;1.赋值 “=”操作符&quot;&gt;&lt;/a&gt;1.赋值 “=”操作符&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;引用类型的赋值和基本类型的赋值效果是不是一样的&lt;/li&gt;
+&lt;li&gt;为对象赋值时，只是将引用从一个地方复制到另一个地方，也就是说这两个指向一个相同的对象。&lt;/li&gt;
+&lt;li&gt;如a是一个对象，让b=a,如果此时改变b的值，那么a的值也会改变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-对象等价性&quot;&gt;&lt;a href=&quot;#2-对象等价性&quot; class=&quot;headerlink&quot; title=&quot;2.对象等价性&quot;&gt;&lt;/a&gt;2.对象等价性&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;==和！=比较的是对象的引用&lt;/li&gt;
+&lt;li&gt;equals()方法比较的是两个对象的实际内容&lt;h2 id=&quot;3-直接常量&quot;&gt;&lt;a href=&quot;#3-直接常量&quot; class=&quot;headerlink&quot; title=&quot;3.直接常量&quot;&gt;&lt;/a&gt;3.直接常量&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;L代表long型&lt;/li&gt;
+&lt;li&gt;F代表float型&lt;/li&gt;
+&lt;li&gt;0x(0X)代表十六进制&lt;/li&gt;
+&lt;li&gt;0代表八进制&lt;h2 id=&quot;4-构造器&quot;&gt;&lt;a href=&quot;#4-构造器&quot; class=&quot;headerlink&quot; title=&quot;4.构造器&quot;&gt;&lt;/a&gt;4.构造器&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;构造器的名称必须与类名完全相同，而且没有返回值，（是唯一大写的方法？）&lt;/li&gt;
+&lt;li&gt;会有一个默认的构造器，即使你没有明确的定义它，但是如果已经定义了一个构造器，编译器就不会帮你创建默认构造器了&lt;h2 id=&quot;5-this关键字&quot;&gt;&lt;a href=&quot;#5-this关键字&quot; class=&quot;headerlink&quot; title=&quot;5.this关键字&quot;&gt;&lt;/a&gt;5.this关键字&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;this只能在方法内部使用，表示对‘调用方法的那个对象’的引用&lt;/li&gt;
+&lt;li&gt;但是如果在方法的内部调用同类中的另一个方法，就不需要使用this了。&lt;h2 id=&quot;6-static关键字&quot;&gt;&lt;a href=&quot;#6-static关键字&quot; class=&quot;headerlink&quot; title=&quot;6.static关键字&quot;&gt;&lt;/a&gt;6.static关键字&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;static方法就是没有this的方法，在static的内部不能调用非静态方法，反过来可以&lt;/li&gt;
+&lt;li&gt;通过类本身来调用static方法&lt;h2 id=&quot;7-初始化&quot;&gt;&lt;a href=&quot;#7-初始化&quot; class=&quot;headerlink&quot; title=&quot;7.初始化&quot;&gt;&lt;/a&gt;7.初始化&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;所有变量在使用前都应得到恰当的初始化&lt;/li&gt;
+&lt;li&gt;类的每个基本类型数据成员保证都会有一个初始值&lt;/li&gt;
+&lt;li&gt;方法的局部变量必须要进行初始化&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;好烦，老板还不给签名，毕业论文也屡不出头绪，不想写&lt;br&gt;别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，&lt;/p&gt;
+&lt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>next社交链接配置问题</title>

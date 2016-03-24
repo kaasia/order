@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title></title>
+      <url>http://yoursite.com/2016/03/24/java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>好烦，老板还不给签名，毕业论文也屡不出头绪，不想写<br>别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，</p>
+<blockquote>
+<p>整理下看的Java编程思想的读书笔记</p>
+</blockquote>
+<hr>
+<h2 id="1-赋值-“-”操作符"><a href="#1-赋值-“-”操作符" class="headerlink" title="1.赋值 “=”操作符"></a>1.赋值 “=”操作符</h2><ul>
+<li>引用类型的赋值和基本类型的赋值效果是不是一样的</li>
+<li>为对象赋值时，只是将引用从一个地方复制到另一个地方，也就是说这两个指向一个相同的对象。</li>
+<li>如a是一个对象，让b=a,如果此时改变b的值，那么a的值也会改变</li>
+</ul>
+<h2 id="2-对象等价性"><a href="#2-对象等价性" class="headerlink" title="2.对象等价性"></a>2.对象等价性</h2><ul>
+<li>==和！=比较的是对象的引用</li>
+<li>equals()方法比较的是两个对象的实际内容<h2 id="3-直接常量"><a href="#3-直接常量" class="headerlink" title="3.直接常量"></a>3.直接常量</h2></li>
+<li>L代表long型</li>
+<li>F代表float型</li>
+<li>0x(0X)代表十六进制</li>
+<li>0代表八进制<h2 id="4-构造器"><a href="#4-构造器" class="headerlink" title="4.构造器"></a>4.构造器</h2></li>
+<li>构造器的名称必须与类名完全相同，而且没有返回值，（是唯一大写的方法？）</li>
+<li>会有一个默认的构造器，即使你没有明确的定义它，但是如果已经定义了一个构造器，编译器就不会帮你创建默认构造器了<h2 id="5-this关键字"><a href="#5-this关键字" class="headerlink" title="5.this关键字"></a>5.this关键字</h2></li>
+<li>this只能在方法内部使用，表示对‘调用方法的那个对象’的引用</li>
+<li>但是如果在方法的内部调用同类中的另一个方法，就不需要使用this了。<h2 id="6-static关键字"><a href="#6-static关键字" class="headerlink" title="6.static关键字"></a>6.static关键字</h2></li>
+<li>static方法就是没有this的方法，在static的内部不能调用非静态方法，反过来可以</li>
+<li>通过类本身来调用static方法<h2 id="7-初始化"><a href="#7-初始化" class="headerlink" title="7.初始化"></a>7.初始化</h2></li>
+<li>所有变量在使用前都应得到恰当的初始化</li>
+<li>类的每个基本类型数据成员保证都会有一个初始值</li>
+<li>方法的局部变量必须要进行初始化</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[next社交链接配置问题]]></title>
       <url>http://yoursite.com/2016/03/21/next%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<h1 id="Next添加社交链接"><a href="#Next添加社交链接" class="headerlink" title="Next添加社交链接"></a>Next添加社交链接</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>社交链接是指next主题边栏，github,微博，豆瓣，知乎之类的个人 主页链接，为了好看，一般旁边会有一个这个社交账号的图标，我在按照教程添加了github,微博，豆瓣，知乎的账号，我发现豆瓣和知乎没有显示图标，导致特别的不美观。</p>
