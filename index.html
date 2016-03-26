@@ -360,13 +360,597 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/24/Executors使用时遇到的问题/" itemprop="url">
+                  Executors使用时遇到的问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T17:02:47+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术相关/" itemprop="url" rel="index">
+                    <span itemprop="name">技术相关</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/24/Executors使用时遇到的问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/Executors使用时遇到的问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>使用Executor时，加了for和不加for什么区别</p>
+<h2 id="具体描述"><a href="#具体描述" class="headerlink" title="具体描述"></a>具体描述</h2><p>这段代码</p>
+<pre><code>private void multiThread(Queue q){
+    ExecutorService exec = Executors.newFixedThreadPool(5);
+    for(int i=0;i&lt;5;i++) {
+        exec.execute(new TaskJob(q));
+    }
+    exec.shutdown();
+}
+</code></pre><blockquote>
+<p>用<code>Thread.currentThread()</code>方法打印出进程号，出现以下区别</p>
+<h4 id="没用for循环"><a href="#没用for循环" class="headerlink" title="没用for循环"></a>没用for循环</h4><p><code>Thread[pool-1-thread-1,5,main]</code><br><code>Thread[pool-2-thread-1,5,main]</code></p>
+<h4 id="用for循环"><a href="#用for循环" class="headerlink" title="用for循环"></a>用for循环</h4><p><code>Thread[pool-1-thread-1,5,main]</code><br><code>Thread[pool-1-thread-2,5,main]</code></p>
+</blockquote>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>即加了for表示为同一个线程池中的线程依次执行Task任务；<br>如果不加，会再开辟新的线程池，那之前创建线程池，并在线程池中分配线程资源也就没有意义了。</p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/24/java编程思想读书笔记（一）/" itemprop="url">
+                  java编程思想读书笔记（一）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T13:02:47+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术相关/" itemprop="url" rel="index">
+                    <span itemprop="name">技术相关</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/24/java编程思想读书笔记（一）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/java编程思想读书笔记（一）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好烦，老板还不给签名，毕业论文也屡不出头绪，不想写<br>别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，</p>
+<blockquote>
+<p>整理下看的Java编程思想的读书笔记</p>
+</blockquote>
+<hr>
+<h2 id="1-赋值-“-”操作符"><a href="#1-赋值-“-”操作符" class="headerlink" title="1.赋值 “=”操作符"></a>1.赋值 “=”操作符</h2><ul>
+<li>引用类型的赋值和基本类型的赋值效果是不是一样的</li>
+<li>为对象赋值时，只是将引用从一个地方复制到另一个地方，也就是说这两个指向一个相同的对象。</li>
+<li>如a是一个对象，让b=a,如果此时改变b的值，那么a的值也会改变</li>
+</ul>
+<h2 id="2-对象等价性"><a href="#2-对象等价性" class="headerlink" title="2.对象等价性"></a>2.对象等价性</h2><ul>
+<li>==和！=比较的是对象的引用</li>
+<li>equals()方法比较的是两个对象的实际内容<h2 id="3-直接常量"><a href="#3-直接常量" class="headerlink" title="3.直接常量"></a>3.直接常量</h2></li>
+<li>L代表long型</li>
+<li>F代表float型</li>
+<li>0x(0X)代表十六进制</li>
+<li>0代表八进制<h2 id="4-构造器"><a href="#4-构造器" class="headerlink" title="4.构造器"></a>4.构造器</h2></li>
+<li>构造器的名称必须与类名完全相同，而且没有返回值，（是唯一大写的方法？）</li>
+<li>会有一个默认的构造器，即使你没有明确的定义它，但是如果已经定义了一个构造器，编译器就不会帮你创建默认构造器了<h2 id="5-this关键字"><a href="#5-this关键字" class="headerlink" title="5.this关键字"></a>5.this关键字</h2></li>
+<li>this只能在方法内部使用，表示对‘调用方法的那个对象’的引用</li>
+<li>但是如果在方法的内部调用同类中的另一个方法，就不需要使用this了。<h2 id="6-static关键字"><a href="#6-static关键字" class="headerlink" title="6.static关键字"></a>6.static关键字</h2></li>
+<li>static方法就是没有this的方法，在static的内部不能调用非静态方法，反过来可以</li>
+<li>通过类本身来调用static方法<h2 id="7-初始化"><a href="#7-初始化" class="headerlink" title="7.初始化"></a>7.初始化</h2></li>
+<li>所有变量在使用前都应得到恰当的初始化</li>
+<li>类的每个基本类型数据成员保证都会有一个初始值</li>
+<li>方法的局部变量必须要进行初始化</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/21/next社交链接配置问题/" itemprop="url">
+                  next社交链接配置问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-21T13:02:47+08:00" content="2016-03-21">
+              2016-03-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术相关/" itemprop="url" rel="index">
+                    <span itemprop="name">技术相关</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/21/next社交链接配置问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/21/next社交链接配置问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Next添加社交链接"><a href="#Next添加社交链接" class="headerlink" title="Next添加社交链接"></a>Next添加社交链接</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>社交链接是指next主题边栏，github,微博，豆瓣，知乎之类的个人 主页链接，为了好看，一般旁边会有一个这个社交账号的图标，我在按照教程添加了github,微博，豆瓣，知乎的账号，我发现豆瓣和知乎没有显示图标，导致特别的不美观。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在主题的配置文件中<br>social_icons:下面配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># Social links</span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/xxx/</span><br><span class="line">  Weibo: http://weibo.com/xxx/</span><br><span class="line">  Douban: https://www.douban.com/people/xxx/</span><br><span class="line">  Zhihu: https://www.zhihu.com/people/xxx</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"># Social Icons</span><br><span class="line">social_icons:</span><br><span class="line">  enable: true</span><br><span class="line">  # Icon Mappings</span><br><span class="line">  GitHub: github</span><br><span class="line">  Twitter: twitter</span><br><span class="line">  Weibo: weibo</span><br><span class="line">  Douban: globe</span><br><span class="line">  Zhihu: globe</span><br></pre></td></tr></table></figure>
+<p>next主题使用的图标是调用的Font Awesome的里面的图标，<br>而Font Awesome里面并没有知乎和豆瓣的图标，因此没有显示，<br>我们只需要在Font Awesome里面找到喜欢的图标，将图标的名字填到相应的位置<br>就可以了。例如我给知乎和豆瓣用的图标是globe，你可以替换成其他相应的。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/18/测试/" itemprop="url">
+                  测试
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-18T09:58:57+08:00" content="2016-03-18">
+              2016-03-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/18/测试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/18/测试/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h2><h3 id="你好吗？"><a href="#你好吗？" class="headerlink" title="你好吗？"></a>你好吗？</h3><h3 id="success"><a href="#success" class="headerlink" title="success!!!"></a>success!!!</h3>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/18/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-18T09:34:14+08:00" content="2016-03-18">
+              2016-03-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/18/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/18/hello-world/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
