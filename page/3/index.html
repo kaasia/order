@@ -62,7 +62,7 @@
 <meta name="description" content="每天进步一点点">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mr.W的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="Mr.W的博客">
 <meta property="og:description" content="每天进步一点点">
 <meta name="twitter:card" content="summary">
@@ -261,8 +261,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/25/如何上传本地项目到github/" itemprop="url">
-                  上传本地项目代码到github仓库
+                <a class="post-title-link" href="/2016/03/24/java编程思想读书笔记（一）/" itemprop="url">
+                  java编程思想读书笔记（一）
                 </a>
               
             
@@ -275,8 +275,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T13:02:47+08:00" content="2016-03-25">
-              2016-03-25
+            <time itemprop="dateCreated" datetime="2016-03-24T13:02:47+08:00" content="2016-03-24">
+              2016-03-24
             </time>
           </span>
 
@@ -305,8 +305,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/25/如何上传本地项目到github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/如何上传本地项目到github/" itemprop="commentsCount"></span>
+                <a href="/2016/03/24/java编程思想读书笔记（一）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/java编程思想读书笔记（一）/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -330,12 +330,33 @@
       
         
           
-            <h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add yourproject</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remot add origin git@ssh地址</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-<h2 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h2><p>执行到第5步时，报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br><span class="line">To git@github.com:kaasia/studyjava.git</span><br><span class="line"> ! [rejected]        master -&gt; master (fetch first)</span><br><span class="line">error: failed to push some refs to &apos;git@github.com:kaasia/studyjava.git&apos;</span><br><span class="line">hint: Updates were rejected because the remote contains work that you do</span><br><span class="line">hint: not have locally. This is usually caused by another repository pushing</span><br><span class="line">hint: to the same ref. You may want to first integrate the remote changes</span><br><span class="line">hint: (e.g., &apos;git pull ...&apos;) before pushing again.</span><br><span class="line">hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos; for details.</span><br></pre></td></tr></table></figure>
-<p>解决办法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push -u orgin master</span><br></pre></td></tr></table></figure>
-<p>DONE! :)</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好烦，老板还不给签名，毕业论文也屡不出头绪，不想写<br>别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，</p>
+<blockquote>
+<p>整理下看的Java编程思想的读书笔记</p>
+</blockquote>
+<hr>
+<h2 id="1-赋值-“-”操作符"><a href="#1-赋值-“-”操作符" class="headerlink" title="1.赋值 “=”操作符"></a>1.赋值 “=”操作符</h2><ul>
+<li>引用类型的赋值和基本类型的赋值效果是不是一样的</li>
+<li>为对象赋值时，只是将引用从一个地方复制到另一个地方，也就是说这两个指向一个相同的对象。</li>
+<li>如a是一个对象，让b=a,如果此时改变b的值，那么a的值也会改变</li>
+</ul>
+<h2 id="2-对象等价性"><a href="#2-对象等价性" class="headerlink" title="2.对象等价性"></a>2.对象等价性</h2><ul>
+<li>==和！=比较的是对象的引用</li>
+<li>equals()方法比较的是两个对象的实际内容<h2 id="3-直接常量"><a href="#3-直接常量" class="headerlink" title="3.直接常量"></a>3.直接常量</h2></li>
+<li>L代表long型</li>
+<li>F代表float型</li>
+<li>0x(0X)代表十六进制</li>
+<li>0代表八进制<h2 id="4-构造器"><a href="#4-构造器" class="headerlink" title="4.构造器"></a>4.构造器</h2></li>
+<li>构造器的名称必须与类名完全相同，而且没有返回值，（是唯一大写的方法？）</li>
+<li>会有一个默认的构造器，即使你没有明确的定义它，但是如果已经定义了一个构造器，编译器就不会帮你创建默认构造器了<h2 id="5-this关键字"><a href="#5-this关键字" class="headerlink" title="5.this关键字"></a>5.this关键字</h2></li>
+<li>this只能在方法内部使用，表示对‘调用方法的那个对象’的引用</li>
+<li>但是如果在方法的内部调用同类中的另一个方法，就不需要使用this了。<h2 id="6-static关键字"><a href="#6-static关键字" class="headerlink" title="6.static关键字"></a>6.static关键字</h2></li>
+<li>static方法就是没有this的方法，在static的内部不能调用非静态方法，反过来可以</li>
+<li>通过类本身来调用static方法<h2 id="7-初始化"><a href="#7-初始化" class="headerlink" title="7.初始化"></a>7.初始化</h2></li>
+<li>所有变量在使用前都应得到恰当的初始化</li>
+<li>类的每个基本类型数据成员保证都会有一个初始值</li>
+<li>方法的局部变量必须要进行初始化</li>
+</ul>
 
           
         
@@ -364,7 +385,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
