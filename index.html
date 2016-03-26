@@ -261,6 +261,136 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/24/Executors使用时遇到的问题/" itemprop="url">
+                  Executors使用时遇到的问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T13:02:47+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术相关/" itemprop="url" rel="index">
+                    <span itemprop="name">技术相关</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/24/Executors使用时遇到的问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/Executors使用时遇到的问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>使用Executor时，加了for和不加for什么区别</p>
+<h2 id="具体描述"><a href="#具体描述" class="headerlink" title="具体描述"></a>具体描述</h2><p>这段代码</p>
+<pre><code>private void multiThread(Queue q){
+    ExecutorService exec = Executors.newFixedThreadPool(5);
+    for(int i=0;i&lt;5;i++) {
+        exec.execute(new TaskJob(q));
+    }
+    exec.shutdown();
+}
+</code></pre><blockquote>
+<p>用<code>Thread.currentThread()</code>方法打印出进程号，出现以下区别</p>
+<h4 id="没用for循环"><a href="#没用for循环" class="headerlink" title="没用for循环"></a>没用for循环</h4><p><code>Thread[pool-1-thread-1,5,main]</code><br><code>Thread[pool-2-thread-1,5,main]</code></p>
+<h4 id="用for循环"><a href="#用for循环" class="headerlink" title="用for循环"></a>用for循环</h4><p><code>Thread[pool-1-thread-1,5,main]</code><br><code>Thread[pool-1-thread-2,5,main]</code></p>
+</blockquote>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>即加了for表示为同一个线程池中的线程依次执行Task任务；<br>如果不加，会再开辟新的线程池，那之前创建线程池，并在线程池中分配线程资源也就没有意义了。</p>
+<hr>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/24/java编程思想读书笔记（一）/" itemprop="url">
                   java编程思想读书笔记（一）
                 </a>
@@ -330,7 +460,7 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>好烦，老板还不给签名，毕业论文也屡不出头绪，不想写<br>别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好烦，老板还不给签名，毕业论文也屡不出头绪，不想写<br>别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，</p>
 <blockquote>
 <p>整理下看的Java编程思想的读书笔记</p>
 </blockquote>
@@ -739,7 +869,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -756,7 +886,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

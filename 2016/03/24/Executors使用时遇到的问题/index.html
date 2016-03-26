@@ -41,12 +41,10 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,Executors,多线程,并发," />
 
 
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="Mr.W的博客" type="application/atom+xml" />
@@ -61,16 +59,31 @@
 
 
 
-<meta name="description" content="每天进步一点点">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tagcloud">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="摘要使用Executor时，加了for和不加for什么区别
+具体描述这段代码
+private void multiThread(Queue q){
+    ExecutorService exec = Executors.newFixedThreadPool(5);
+    for(int i=0;i&amp;lt;5;i++) {
+        exec.execute(new TaskJob(q))">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Executors使用时遇到的问题">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/Executors使用时遇到的问题/index.html">
 <meta property="og:site_name" content="Mr.W的博客">
-<meta property="og:description" content="每天进步一点点">
-<meta property="og:updated_time" content="2016-03-22T08:26:15.064Z">
+<meta property="og:description" content="摘要使用Executor时，加了for和不加for什么区别
+具体描述这段代码
+private void multiThread(Queue q){
+    ExecutorService exec = Executors.newFixedThreadPool(5);
+    for(int i=0;i&amp;lt;5;i++) {
+        exec.execute(new TaskJob(q))">
+<meta property="og:updated_time" content="2016-03-24T14:50:42.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tagcloud">
-<meta name="twitter:description" content="每天进步一点点">
+<meta name="twitter:title" content="Executors使用时遇到的问题">
+<meta name="twitter:description" content="摘要使用Executor时，加了for和不加for什么区别
+具体描述这段代码
+private void multiThread(Queue q){
+    ExecutorService exec = Executors.newFixedThreadPool(5);
+    for(int i=0;i&amp;lt;5;i++) {
+        exec.execute(new TaskJob(q))">
 
 
 
@@ -88,13 +101,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    标签 | Mr.W的博客
-  
-</title>
+  <title> Executors使用时遇到的问题 | Mr.W的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -125,7 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,18 +255,157 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 7 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Executors使用时遇到的问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T13:02:47+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术相关/" itemprop="url" rel="index">
+                    <span itemprop="name">技术相关</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/24/Executors使用时遇到的问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/Executors使用时遇到的问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Executors/" style="font-size: 12px; color: #ccc">Executors</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/java/" style="font-size: 30px; color: #111">java</a> <a href="/tags/java编程思想/" style="font-size: 12px; color: #ccc">java编程思想</a> <a href="/tags/多线程/" style="font-size: 12px; color: #ccc">多线程</a> <a href="/tags/并发/" style="font-size: 12px; color: #ccc">并发</a> <a href="/tags/读书笔记/" style="font-size: 12px; color: #ccc">读书笔记</a>
-        </div>
-      </div>
+      </header>
     
-	
-	
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>使用Executor时，加了for和不加for什么区别</p>
+<h2 id="具体描述"><a href="#具体描述" class="headerlink" title="具体描述"></a>具体描述</h2><p>这段代码</p>
+<pre><code>private void multiThread(Queue q){
+    ExecutorService exec = Executors.newFixedThreadPool(5);
+    for(int i=0;i&lt;5;i++) {
+        exec.execute(new TaskJob(q));
+    }
+    exec.shutdown();
+}
+</code></pre><blockquote>
+<p>用<code>Thread.currentThread()</code>方法打印出进程号，出现以下区别</p>
+<h4 id="没用for循环"><a href="#没用for循环" class="headerlink" title="没用for循环"></a>没用for循环</h4><p><code>Thread[pool-1-thread-1,5,main]</code><br><code>Thread[pool-2-thread-1,5,main]</code></p>
+<h4 id="用for循环"><a href="#用for循环" class="headerlink" title="用for循环"></a>用for循环</h4><p><code>Thread[pool-1-thread-1,5,main]</code><br><code>Thread[pool-1-thread-2,5,main]</code></p>
+</blockquote>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>即加了for表示为同一个线程池中的线程依次执行Task任务；<br>如果不加，会再开辟新的线程池，那之前创建线程池，并在线程池中分配线程资源也就没有意义了。</p>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+            <a href="/tags/Executors/" rel="tag">#Executors</a>
+          
+            <a href="/tags/多线程/" rel="tag">#多线程</a>
+          
+            <a href="/tags/并发/" rel="tag">#并发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/24/java编程思想读书笔记（一）/" rel="next" title="java编程思想读书笔记（一）">
+                <i class="fa fa-chevron-left"></i> java编程思想读书笔记（一）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -268,6 +414,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/24/Executors使用时遇到的问题/"
+           data-title="Executors使用时遇到的问题" data-url="http://yoursite.com/2016/03/24/Executors使用时遇到的问题/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -287,8 +441,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -381,6 +544,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体描述"><span class="nav-number">2.</span> <span class="nav-text">具体描述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#没用for循环"><span class="nav-number">2.0.1.</span> <span class="nav-text">没用for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用for循环"><span class="nav-number">2.0.2.</span> <span class="nav-text">用for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">2.0.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -477,6 +657,167 @@
 
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 
