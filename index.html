@@ -261,6 +261,124 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/28/python画图中文显示问题/" itemprop="url">
+                  python画图中文显示
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-28T13:02:47+08:00" content="2016-03-28">
+              2016-03-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/28/python画图中文显示问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/python画图中文显示问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>python提高的matplotlib模块能让我们很方便的进行绘图，一开始用的时候，一直不知道如何让图示中显示中文的办法，后来百度到了，特此记录</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>matplotlib提供了fontproperties属性能够进行字体设置，具体的实例代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">Created on Tue Mar 29 10:29:02 2016</span><br><span class="line"></span><br><span class="line">@author: kfly</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import pylab as plt</span><br><span class="line"></span><br><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">y = [1, 2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">plt.plot(x,y,color=&apos;g&apos;,label=u&quot;一条直线&quot;)</span><br><span class="line"></span><br><span class="line">plt.title(u&quot;显示直线&quot;,fontproperties=&quot;SimHei&quot;)</span><br><span class="line"></span><br><span class="line">plt.xlabel(u&quot;X轴&quot;,fontproperties=&quot;SimHei&quot;)</span><br><span class="line"></span><br><span class="line">plt.ylabel(u&quot;Y轴&quot;,fontproperties=&quot;SimHei&quot;)</span><br><span class="line">plt.xlim(0,6)</span><br><span class="line">plt.ylim(0,6)</span><br><span class="line">plt.legend(prop=&#123;&apos;family&apos;:&apos;SimHei&apos;&#125;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xs6ev.com1.z0.glb.clouddn.com/imageshello.png" alt="image"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/25/如何上传本地项目到github/" itemprop="url">
                   上传本地项目代码到github仓库
                 </a>
@@ -539,8 +657,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术相关/" itemprop="url" rel="index">
-                    <span itemprop="name">技术相关</span>
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
                   </a>
                 </span>
 
@@ -989,7 +1107,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -997,7 +1115,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1006,7 +1124,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-26T02:36:39.399Z</updated>
+  <updated>2016-03-29T02:49:42.674Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python画图中文显示</title>
+    <link href="http://yoursite.com/2016/03/28/python%E7%94%BB%E5%9B%BE%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2016/03/28/python画图中文显示问题/</id>
+    <published>2016-03-28T05:02:47.000Z</published>
+    <updated>2016-03-29T02:49:42.674Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;python提高的matplotlib模块能让我们很方便的进行绘图，一开始用的时候，一直不知道如何让图示中显示中文的办法，后来百度到了，特此记录&lt;/p&gt;
+&lt;h2 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h2&gt;&lt;p&gt;matplotlib提供了fontproperties属性能够进行字体设置，具体的实例代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Created on Tue Mar 29 10:29:02 2016&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@author: kfly&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import pylab as plt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;x = [1, 2, 3, 4, 5]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;y = [1, 2, 3, 4, 5]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.plot(x,y,color=&amp;apos;g&amp;apos;,label=u&amp;quot;一条直线&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.title(u&amp;quot;显示直线&amp;quot;,fontproperties=&amp;quot;SimHei&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.xlabel(u&amp;quot;X轴&amp;quot;,fontproperties=&amp;quot;SimHei&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.ylabel(u&amp;quot;Y轴&amp;quot;,fontproperties=&amp;quot;SimHei&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.xlim(0,6)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.ylim(0,6)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.legend(prop=&amp;#123;&amp;apos;family&amp;apos;:&amp;apos;SimHei&amp;apos;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plt.show()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xs6ev.com1.z0.glb.clouddn.com/imageshello.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;python提高的matplotlib模块能让我们很方便的进行绘图，一开始用的时候，一直不知道如何让图示中显示中文的办法，后来百度到了，特此
+    
+    </summary>
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="matplotlab" scheme="http://yoursite.com/tags/matplotlab/"/>
+    
+  </entry>
   
   <entry>
     <title>上传本地项目代码到github仓库</title>
@@ -93,7 +121,7 @@
     <link href="http://yoursite.com/2016/03/24/java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2016/03/24/java编程思想读书笔记（一）/</id>
     <published>2016-03-24T05:02:47.000Z</published>
-    <updated>2016-03-24T14:53:31.339Z</updated>
+    <updated>2016-03-29T02:49:46.387Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;好烦，老板还不给签名，毕业论文也屡不出头绪，不想写&lt;br&gt;别人都有了比较好的去处，而自己能不能顺利毕业还很难说，真是啪啪的打脸，&lt;/p&gt;
 &lt;blockquote&gt;
@@ -131,7 +159,7 @@
     
     </summary>
     
-      <category term="技术相关" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/"/>
+      <category term="JAVA" scheme="http://yoursite.com/categories/JAVA/"/>
     
     
       <category term="java" scheme="http://yoursite.com/tags/java/"/>
