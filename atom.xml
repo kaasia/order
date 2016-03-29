@@ -48,7 +48,7 @@
     <link href="http://yoursite.com/2016/03/25/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E5%88%B0github/"/>
     <id>http://yoursite.com/2016/03/25/如何上传本地项目到github/</id>
     <published>2016-03-25T05:02:47.000Z</published>
-    <updated>2016-03-26T02:36:39.399Z</updated>
+    <updated>2016-03-29T02:52:50.870Z</updated>
     
     <content type="html">&lt;h2 id=&quot;参考代码&quot;&gt;&lt;a href=&quot;#参考代码&quot; class=&quot;headerlink&quot; title=&quot;参考代码&quot;&gt;&lt;/a&gt;参考代码&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git add yourproject&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git commit -m &amp;quot;first commit&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git remot add origin git@ssh地址&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git push -u origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;实例操作&quot;&gt;&lt;a href=&quot;#实例操作&quot; class=&quot;headerlink&quot; title=&quot;实例操作&quot;&gt;&lt;/a&gt;实例操作&lt;/h2&gt;&lt;p&gt;执行到第5步时，报错&lt;/p&gt;
@@ -64,7 +64,7 @@
     
     </summary>
     
-      <category term="技术相关" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/"/>
+      <category term="Github" scheme="http://yoursite.com/categories/Github/"/>
     
     
       <category term="github" scheme="http://yoursite.com/tags/github/"/>
@@ -76,7 +76,7 @@
     <link href="http://yoursite.com/2016/03/24/Executors%E4%BD%BF%E7%94%A8%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2016/03/24/Executors使用时遇到的问题/</id>
     <published>2016-03-24T09:02:47.000Z</published>
-    <updated>2016-03-26T02:25:54.777Z</updated>
+    <updated>2016-03-29T02:52:11.267Z</updated>
     
     <content type="html">&lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;p&gt;使用Executor时，加了for和不加for什么区别&lt;/p&gt;
 &lt;h2 id=&quot;具体描述&quot;&gt;&lt;a href=&quot;#具体描述&quot; class=&quot;headerlink&quot; title=&quot;具体描述&quot;&gt;&lt;/a&gt;具体描述&lt;/h2&gt;&lt;p&gt;这段代码&lt;/p&gt;
@@ -103,7 +103,7 @@
     
     </summary>
     
-      <category term="技术相关" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/"/>
+      <category term="JAVA" scheme="http://yoursite.com/categories/JAVA/"/>
     
     
       <category term="java" scheme="http://yoursite.com/tags/java/"/>
@@ -175,7 +175,7 @@
     <link href="http://yoursite.com/2016/03/21/next%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2016/03/21/next社交链接配置问题/</id>
     <published>2016-03-21T05:02:47.000Z</published>
-    <updated>2016-03-24T05:47:23.600Z</updated>
+    <updated>2016-03-29T02:52:36.929Z</updated>
     
     <content type="html">&lt;h1 id=&quot;Next添加社交链接&quot;&gt;&lt;a href=&quot;#Next添加社交链接&quot; class=&quot;headerlink&quot; title=&quot;Next添加社交链接&quot;&gt;&lt;/a&gt;Next添加社交链接&lt;/h1&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;社交链接是指next主题边栏，github,微博，豆瓣，知乎之类的个人 主页链接，为了好看，一般旁边会有一个这个社交账号的图标，我在按照教程添加了github,微博，豆瓣，知乎的账号，我发现豆瓣和知乎没有显示图标，导致特别的不美观。&lt;/p&gt;
 &lt;h2 id=&quot;解决方法&quot;&gt;&lt;a href=&quot;#解决方法&quot; class=&quot;headerlink&quot; title=&quot;解决方法&quot;&gt;&lt;/a&gt;解决方法&lt;/h2&gt;&lt;p&gt;在主题的配置文件中&lt;br&gt;social_icons:下面配置&lt;/p&gt;
@@ -189,7 +189,7 @@
     
     </summary>
     
-      <category term="技术相关" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/"/>
+      <category term="Next" scheme="http://yoursite.com/categories/Next/"/>
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
