@@ -261,6 +261,168 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/04/python-scrapy官方demo运行/" itemprop="url">
+                  scrapy-demo运行
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-04T17:02:47+08:00" content="2016-04-04">
+              2016-04-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/04/python-scrapy官方demo运行/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/04/python-scrapy官方demo运行/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>scrapy是一个python爬虫框架，为了方便学习开发者在github上提供了一个<a href="https://github.com/scrapy/dirbot" target="_blank" rel="external">样例</a><br>。本文就是描述了运行这个demo过程出现的一些问题及解决办法</p>
+<h2 id="1-将这个github项目down到本地"><a href="#1-将这个github项目down到本地" class="headerlink" title="1.将这个github项目down到本地"></a>1.将这个github项目down到本地</h2><ul>
+<li>在github上fork这个项目，这样能够获得到改项目ssh的git链接。<br>在centos系统上创建项目文件夹，在文件夹内执行</li>
+<li>git clone fork得到的ssh链接<h6 id="出现了拒绝访问的错误"><a href="#出现了拒绝访问的错误" class="headerlink" title="出现了拒绝访问的错误"></a>出现了拒绝访问的错误</h6>原因没有生成ssh-key,没有与github进行访问绑定</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;”，your_email是你的email</span><br></pre></td></tr></table></figure>
+<p>在github上新添加一个ssh-key ,将生成的~/.ssh/id_rsa.pub的内容复制进去<br>测试ssh key是否成功，使用命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your name&quot; //配置用户名</span><br><span class="line">git config --global user.email &quot;your email&quot; //配置email</span><br></pre></td></tr></table></figure>
+<p>此时执行git clone ssh链接，<br>成功将项目down到了本地</p>
+<h2 id="2-安装pip"><a href="#2-安装pip" class="headerlink" title="2.安装pip"></a>2.安装pip</h2><ul>
+<li>pip是一个python的模块安装工具</li>
+<li>得到压缩包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://pypi.python.org/packages/source/p/pip/pip-8.1.1.tar.gz#md5=6b86f11841e89c8241d689956ba99ed7</span><br></pre></td></tr></table></figure>
+<p>进入目录python setup.py install 进行安装</p>
+<h2 id="3-安装-scrapy"><a href="#3-安装-scrapy" class="headerlink" title="3.安装 scrapy"></a>3.安装 scrapy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scrapy</span><br></pre></td></tr></table></figure>
+<p>出现一系列错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal error: Python.h: No such file or directory</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install python-devel</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal error: ffi.h: No such file or directory</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install libffi libffi-devel</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal error: openssl/e_os2.h: No such file or directory</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scrapy</span><br></pre></td></tr></table></figure>
+<p>success!!!  :)</p>
+<h2 id="4-安装爬虫"><a href="#4-安装爬虫" class="headerlink" title="4.安装爬虫"></a>4.安装爬虫</h2><p>进入项目目录</p>
+<ul>
+<li>安装dmoz爬虫 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+<ul>
+<li>测试是否成功</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy list</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行爬虫</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl dmoz</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将结果保存为json文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl dmoz -o item.json -t json</span><br></pre></td></tr></table></figure>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
+<li><a href="http://blog.csdn.net/tianxiajianling/article/details/6636204" target="_blank" rel="external">fatal error: Python.h: No such file or directory</a></li>
+<li><a href="http://blog.csdn.net/iefreer/article/details/20254937" target="_blank" rel="external">CentOS6.2下面安装使用Scrapy遇到的一些错误 </a></li>
+<li><a href="https://linux.cn/article-4147-1.html" target="_blank" rel="external">fatal error: openssl/aes.h: No such file or directory</a></li>
+<li><a href="http://blog.csdn.net/waitfor_/article/details/23466607" target="_blank" rel="external">github入门</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/28/python画图中文显示问题/" itemprop="url">
                   python画图中文显示
                 </a>
@@ -1107,7 +1269,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1124,7 +1286,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
