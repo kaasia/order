@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-05T07:35:15.508Z</updated>
+  <updated>2016-04-06T01:16:25.081Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java编程思想读书笔记（二）</title>
+    <link href="http://yoursite.com/2016/04/04/java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/04/04/java编程思想读书笔记（二）/</id>
+    <published>2016-04-04T11:02:47.000Z</published>
+    <updated>2016-04-06T01:16:25.081Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;访问权限控制为了解决&lt;strong&gt;如何把变动的事物与保持不变的事物区分开来&lt;/strong&gt;的问题&lt;/p&gt;
+&lt;h2 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;修饰关键字，权限由大到小分别为&lt;br&gt;&lt;code&gt;public&lt;/code&gt; ，&lt;code&gt;protected&lt;/code&gt;， &lt;code&gt;默认&lt;/code&gt;， &lt;code&gt;private&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Java包的命名规范：全部使用小写字母，包括中间的字也是&lt;/li&gt;
+&lt;li&gt;protected关键字具有继承访问权限；相同包内的其他类可以访问protected元素；&lt;br&gt;其他包的继承类可以访问基类的protected元素&lt;/li&gt;
+&lt;li&gt;类的修饰&lt;br&gt;类既不可以是private的，也不可以是protected的；&lt;br&gt;只能是默认或者public的&lt;/li&gt;
+&lt;li&gt;代码测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;com.access.desert&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	AccessCookie(能够访问Cookie和AccessCookie2的public method,protected method,默认 method)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	AccessCookie2(继承自Cookie,具有Cookie的public method,protected method,默认 method)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	Cookie (public method,protected method,默认 method,private method)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    com.tryaccess&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	AccessCookie3(继承自Cookie,具有Cookie的public,protected)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	Dinner(能够访问Cookie和AccessCookie2的public,AccessCookie3的public method,protected method)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;访问权限控制为了解决&lt;strong&gt;如何把变动的事物与保持不变的事物区分开来&lt;/strong&gt;的问题&lt;/p&gt;
+&lt;h
+    
+    </summary>
+    
+      <category term="JAVA" scheme="http://yoursite.com/categories/JAVA/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="java编程思想" scheme="http://yoursite.com/tags/java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/"/>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>scrapy-demo运行</title>

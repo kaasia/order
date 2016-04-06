@@ -261,6 +261,131 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/04/java编程思想读书笔记（二）/" itemprop="url">
+                  java编程思想读书笔记（二）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-04T19:02:47+08:00" content="2016-04-04">
+              2016-04-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/04/java编程思想读书笔记（二）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/04/java编程思想读书笔记（二）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>访问权限控制为了解决<strong>如何把变动的事物与保持不变的事物区分开来</strong>的问题</p>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li>修饰关键字，权限由大到小分别为<br><code>public</code> ，<code>protected</code>， <code>默认</code>， <code>private</code></li>
+<li>Java包的命名规范：全部使用小写字母，包括中间的字也是</li>
+<li>protected关键字具有继承访问权限；相同包内的其他类可以访问protected元素；<br>其他包的继承类可以访问基类的protected元素</li>
+<li>类的修饰<br>类既不可以是private的，也不可以是protected的；<br>只能是默认或者public的</li>
+<li>代码测试</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">com.access.desert</span><br><span class="line">    	AccessCookie(能够访问Cookie和AccessCookie2的public method,protected method,默认 method)</span><br><span class="line">    	AccessCookie2(继承自Cookie,具有Cookie的public method,protected method,默认 method)</span><br><span class="line">    	Cookie (public method,protected method,默认 method,private method)</span><br><span class="line">    com.tryaccess</span><br><span class="line">    	AccessCookie3(继承自Cookie,具有Cookie的public,protected)</span><br><span class="line">    	Dinner(能够访问Cookie和AccessCookie2的public,AccessCookie3的public method,protected method)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/04/python-scrapy官方demo运行/" itemprop="url">
                   scrapy-demo运行
                 </a>
@@ -1269,7 +1394,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

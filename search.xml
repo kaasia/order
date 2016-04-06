@@ -4,6 +4,23 @@
   
     
     <entry>
+      <title><![CDATA[java编程思想读书笔记（二）]]></title>
+      <url>http://yoursite.com/2016/04/04/java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>访问权限控制为了解决<strong>如何把变动的事物与保持不变的事物区分开来</strong>的问题</p>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li>修饰关键字，权限由大到小分别为<br><code>public</code> ，<code>protected</code>， <code>默认</code>， <code>private</code></li>
+<li>Java包的命名规范：全部使用小写字母，包括中间的字也是</li>
+<li>protected关键字具有继承访问权限；相同包内的其他类可以访问protected元素；<br>其他包的继承类可以访问基类的protected元素</li>
+<li>类的修饰<br>类既不可以是private的，也不可以是protected的；<br>只能是默认或者public的</li>
+<li>代码测试</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">com.access.desert</span><br><span class="line">    	AccessCookie(能够访问Cookie和AccessCookie2的public method,protected method,默认 method)</span><br><span class="line">    	AccessCookie2(继承自Cookie,具有Cookie的public method,protected method,默认 method)</span><br><span class="line">    	Cookie (public method,protected method,默认 method,private method)</span><br><span class="line">    com.tryaccess</span><br><span class="line">    	AccessCookie3(继承自Cookie,具有Cookie的public,protected)</span><br><span class="line">    	Dinner(能够访问Cookie和AccessCookie2的public,AccessCookie3的public method,protected method)</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[scrapy-demo运行]]></title>
       <url>http://yoursite.com/2016/04/04/python-scrapy%E5%AE%98%E6%96%B9demo%E8%BF%90%E8%A1%8C/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>scrapy是一个python爬虫框架，为了方便学习开发者在github上提供了一个<a href="https://github.com/scrapy/dirbot" target="_blank" rel="external">样例</a><br>。本文就是描述了运行这个demo过程出现的一些问题及解决办法</p>
